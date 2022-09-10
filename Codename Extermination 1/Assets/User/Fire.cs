@@ -23,20 +23,19 @@ public class Fire : MonoBehaviour
 
     void Update()
     {
-        if (isState)
-        {
-           
-            PistolAnimator.SetTrigger(openTrigger2);
-            FireSound.Play();
-           
-        }    
-        else
+        
+        if (isState && Time.time > nextFire )
         {
             nextFire = Time.time + fireRate;
-            Instantiate(bullet, Spawn.transform.position, Spawn.rotation);
-            PistolAnimator.SetTrigger(openTrigger);          
-           
+            Instantiate(bullet, Spawn.transform.position, Spawn.rotation);            
+            FireSound.Play();          
+            PistolAnimator.SetTrigger(openTrigger);                      
+        }    
+        else 
+        {          
+            PistolAnimator.SetTrigger(openTrigger2);                    
         }
+        
            
     }
 
