@@ -17,10 +17,14 @@ public class TakePistol : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        fire.gameObject.SetActive(true);
-        HandsWithPistol.gameObject.SetActive(true);       
-        HandsWithoutAll.gameObject.SetActive(false);
-        Destroy(pistol);
+        if (other.gameObject.tag == "Player")
+        {
+            fire.gameObject.SetActive(true);
+            HandsWithPistol.gameObject.SetActive(true);
+            HandsWithoutAll.gameObject.SetActive(false);
+            Destroy(pistol);
+        }
+       
     }
     
 }

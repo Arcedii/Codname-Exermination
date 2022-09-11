@@ -33,7 +33,7 @@ public class Fire : MonoBehaviour
         }    
         else 
         {          
-            PistolAnimator.SetTrigger(openTrigger2);                    
+            PistolAnimator.SetTrigger(openTrigger2);        
         }
         
            

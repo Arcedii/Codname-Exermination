@@ -36,7 +36,7 @@ public class PistolFire : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     }
     void Fire()
     {
-        if (isPressed)
+        if (isPressed )
         {
             i = 0;
             PistolAnimator.SetTrigger(openTrigger);
